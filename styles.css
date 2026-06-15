@@ -1,0 +1,225 @@
+:root {
+  --color-primary: #1B3A63;
+  --color-accent: #5FCDBE;
+  --color-bg: #F5F2EC;
+  --color-bg-alt: #ffffff;
+  --color-text: #1f2933;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header */
+.header {
+  background: var(--color-bg-alt);
+  border-bottom: 1px solid #e6e2da;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand__logo {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.brand__name {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  letter-spacing: 0.05em;
+}
+
+.nav {
+  display: flex;
+  gap: 24px;
+}
+
+.nav a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  color: var(--color-accent);
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, var(--color-primary), #2a5694);
+  color: #fff;
+  padding: 96px 0;
+  text-align: center;
+}
+
+.hero__inner h1 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+.hero__inner p {
+  font-size: 1.15rem;
+  max-width: 640px;
+  margin: 0 auto 32px;
+  color: #e3ecf7;
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  background: var(--color-accent);
+  color: var(--color-primary);
+  font-weight: 700;
+  text-decoration: none;
+  padding: 14px 32px;
+  border-radius: 8px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Sections */
+.section {
+  padding: 72px 0;
+}
+
+.section--alt {
+  background: var(--color-bg-alt);
+}
+
+.section h2 {
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.section > .container > p {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: var(--color-bg);
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid #e6e2da;
+}
+
+.card h3 {
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+/* Case */
+.case {
+  max-width: 720px;
+  margin: 0 auto;
+  background: var(--color-bg);
+  border-radius: 12px;
+  padding: 32px;
+  border-left: 6px solid var(--color-accent);
+}
+
+.case h3 {
+  color: var(--color-primary);
+  margin-bottom: 12px;
+}
+
+.case__tech {
+  margin-top: 16px;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+/* Contato */
+.contato {
+  text-align: center;
+}
+
+.contato p {
+  margin-bottom: 24px;
+}
+
+/* Fundadores */
+.founders {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.founder {
+  background: var(--color-bg);
+  border-radius: 12px;
+  padding: 28px 36px;
+  border: 1px solid #e6e2da;
+  text-align: center;
+}
+
+.founder h3 {
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
+
+.founder a {
+  color: var(--color-accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.founder a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+  background: var(--color-primary);
+  color: #cbd6e6;
+  text-align: center;
+  padding: 24px 0;
+  font-size: 0.9rem;
+}
