@@ -12,6 +12,12 @@ Site institucional/portfólio para apresentar a empresa, mostrar os serviços
 oferecidos e usar o Colégio Nova Prana como case/prova social, além de
 disponibilizar formas de contato para novos clientes.
 
+## Posicionamento: uso de IA
+- Utilizamos IA como ferramenta de produtividade, mas somos 100% responsáveis por tudo que entregamos
+- Revisamos, validamos e dominamos cada linha de código — não somos amadores que delegam tudo à IA e somem
+- Garantimos suporte completo sobre tudo que construímos
+- Mensagem central: IA nos torna mais rápidos, não nos substitui
+
 ## Serviços
 - Desenvolvimento web (sites e landing pages)
 - Desenvolvimento de sistemas/software sob demanda

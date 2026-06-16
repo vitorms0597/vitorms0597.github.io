@@ -61,12 +61,18 @@
         <img src="logo.jpeg" alt="Logo SBTECH" class="brand__logo" width="40" height="40" />
         <span class="brand__name">SBTECH</span>
       </a>
-      <nav class="nav" aria-label="Navegação principal">
-        <a href="#sobre">Sobre</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#case">Cases</a>
-        <a href="#fundadores">Fundadores</a>
-        <a href="#contato">Contato</a>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" id="nav-menu" aria-label="Navegação principal">
+        <a href="#sobre" class="nav__link">Sobre</a>
+        <a href="#servicos" class="nav__link">Serviços</a>
+        <a href="#case" class="nav__link">Cases</a>
+        <a href="#fundadores" class="nav__link">Fundadores</a>
+        <a href="#contato" class="nav__link">Contato</a>
       </nav>
     </div>
   </header>
@@ -93,6 +99,30 @@
           a dor do negócio antes de escrever a primeira linha de código —
           e entregamos soluções que realmente fazem diferença no dia a dia.
         </p>
+      </div>
+    </section>
+
+    <section class="section section--ia" aria-labelledby="ia-titulo">
+      <div class="container">
+        <h2 id="ia-titulo">Tecnologia com responsabilidade</h2>
+        <p class="ia-subtitulo">Usamos inteligência artificial — e assumimos 100% do que entregamos.</p>
+        <div class="ia-pilares">
+          <div class="ia-pilar">
+            <span class="ia-icone">⚙️</span>
+            <h3>IA como ferramenta</h3>
+            <p>Usamos IA para trabalhar mais rápido e com mais qualidade. Mas quem toma cada decisão técnica somos nós.</p>
+          </div>
+          <div class="ia-pilar">
+            <span class="ia-icone">✅</span>
+            <h3>Revisamos tudo</h3>
+            <p>Cada linha de código é revisada, testada e validada por nós antes de chegar ao cliente. Sem exceção.</p>
+          </div>
+          <div class="ia-pilar">
+            <span class="ia-icone">🤝</span>
+            <h3>Suporte garantido</h3>
+            <p>Dominamos tudo que construímos. Se surgir qualquer problema, estamos aqui — não sumimos depois da entrega.</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -129,7 +159,7 @@
             Desenvolvemos um sistema de gestão escolar completo que substituiu
             controles manuais e planilhas. Hoje a escola gerencia turmas,
             alunos e equipe pedagógica em um só lugar, com acesso seguro e
-            diferenciado por perfil de usuário (professores e coordenação).
+            diferenciado.
           </p>
           <p class="case__tech">
             Tecnologias: Java / Spring Boot, Next.js / React, PostgreSQL.
@@ -143,6 +173,7 @@
         <h2 id="fundadores-titulo">Fundadores</h2>
         <div class="founders">
           <div class="founder">
+            <img src="https://github.com/vitorms0597.png" alt="Foto de Vitor Mendes dos Santos" class="founder__photo" width="96" height="96" />
             <h3>Vitor Mendes dos Santos</h3>
             <a
               href="https://www.linkedin.com/in/vitor-santos-419428113/"
@@ -152,6 +183,7 @@
             >LinkedIn →</a>
           </div>
           <div class="founder">
+            <img src="https://github.com/Joaosam.png" alt="Foto de João Pedro Mendes dos Santos" class="founder__photo" width="96" height="96" />
             <h3>João Pedro Mendes dos Santos</h3>
             <a
               href="https://www.linkedin.com/in/joaosam/"
@@ -187,5 +219,23 @@
     </div>
   </footer>
 
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = navMenu.classList.toggle('nav--open');
+      hamburger.classList.toggle('hamburger--open', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+
+    navMenu.querySelectorAll('.nav__link').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('nav--open');
+        hamburger.classList.remove('hamburger--open');
+        hamburger.setAttribute('aria-expanded', false);
+      });
+    });
+  </script>
 </body>
 </html>
