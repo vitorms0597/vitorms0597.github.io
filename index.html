@@ -29,6 +29,11 @@
   <!-- Favicon -->
   <link rel="icon" href="logo.jpeg" type="image/jpeg" />
 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
   <!-- Schema.org: Organization -->
   <script type="application/ld+json">
   {
@@ -79,8 +84,14 @@
 
   <main>
     <section class="hero" aria-label="Apresentação">
+      <div class="hero__aurora" aria-hidden="true">
+        <span class="hero__blob hero__blob--a"></span>
+        <span class="hero__blob hero__blob--b"></span>
+        <span class="hero__blob hero__blob--c"></span>
+      </div>
       <div class="container hero__inner">
-        <h1>Software sob medida para o seu negócio</h1>
+        <p class="eyebrow eyebrow--light">SBTECH Software House</p>
+        <h1>Software sob medida<br />para o seu negócio</h1>
         <p>
           A SBTECH desenvolve sistemas, sites e soluções de Business
           Intelligence que resolvem problemas reais — do jeito que sua
@@ -92,6 +103,7 @@
 
     <section id="sobre" class="section" aria-labelledby="sobre-titulo">
       <div class="container">
+        <p class="eyebrow">Quem somos</p>
         <h2 id="sobre-titulo">Sobre nós</h2>
         <p>
           Somos uma software house criada por dois irmãos apaixonados por
@@ -104,21 +116,22 @@
 
     <section class="section section--ia" aria-labelledby="ia-titulo">
       <div class="container">
+        <p class="eyebrow eyebrow--light">Como trabalhamos</p>
         <h2 id="ia-titulo">Tecnologia com responsabilidade</h2>
         <p class="ia-subtitulo">Usamos inteligência artificial — e assumimos 100% do que entregamos.</p>
         <div class="ia-pilares">
           <div class="ia-pilar">
-            <span class="ia-icone">⚙️</span>
+            <span class="ia-icone"><span class="ia-icone__glyph">⚙️</span></span>
             <h3>IA como ferramenta</h3>
             <p>Usamos IA para trabalhar mais rápido e com mais qualidade. Mas quem toma cada decisão técnica somos nós.</p>
           </div>
           <div class="ia-pilar">
-            <span class="ia-icone">✅</span>
+            <span class="ia-icone"><span class="ia-icone__glyph">✅</span></span>
             <h3>Revisamos tudo</h3>
             <p>Cada linha de código é revisada, testada e validada por nós antes de chegar ao cliente. Sem exceção.</p>
           </div>
           <div class="ia-pilar">
-            <span class="ia-icone">🤝</span>
+            <span class="ia-icone"><span class="ia-icone__glyph">🤝</span></span>
             <h3>Suporte garantido</h3>
             <p>Dominamos tudo que construímos. Se surgir qualquer problema, estamos aqui — não sumimos depois da entrega.</p>
           </div>
@@ -128,6 +141,7 @@
 
     <section id="servicos" class="section section--alt" aria-labelledby="servicos-titulo">
       <div class="container">
+        <p class="eyebrow">O que fazemos</p>
         <h2 id="servicos-titulo">Serviços</h2>
         <div class="cards">
           <div class="card">
@@ -152,6 +166,7 @@
 
     <section id="case" class="section" aria-labelledby="case-titulo">
       <div class="container">
+        <p class="eyebrow">Resultado real</p>
         <h2 id="case-titulo">Cases</h2>
         <article class="case">
           <h3>Colégio Nova Prana</h3>
@@ -170,6 +185,7 @@
 
     <section id="fundadores" class="section section--alt" aria-labelledby="fundadores-titulo">
       <div class="container">
+        <p class="eyebrow">Quem está por trás</p>
         <h2 id="fundadores-titulo">Fundadores</h2>
         <div class="founders">
           <div class="founder">
@@ -198,6 +214,7 @@
 
     <section id="contato" class="section" aria-labelledby="contato-titulo">
       <div class="container contato">
+        <p class="eyebrow">Vamos conversar</p>
         <h2 id="contato-titulo">Contato</h2>
         <p>Quer conversar sobre o seu projeto? Fale com a gente pelo WhatsApp.</p>
         <a
@@ -220,6 +237,11 @@
   </footer>
 
   <script>
+    const header = document.querySelector('.header');
+    const onScroll = () => header.classList.toggle('header--scrolled', window.scrollY > 8);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
 
